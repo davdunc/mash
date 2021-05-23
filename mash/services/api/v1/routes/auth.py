@@ -131,7 +131,7 @@ class Login(Resource):
 @api.route('/logout')
 class Logout(Resource):
     @api.doc('account_login')
-    @jwt_required()
+    @jwt_required(refresh=True)
     @api.doc(security='apiKey')
     @api.response(200, 'Logged out', default_response)
     @api.response(400, 'Logout failed', default_response)

@@ -55,7 +55,7 @@ api.models['token_response'] = token_response
 @api.route('/refresh')
 class RefreshToken(Resource):
     @api.doc('refresh_token')
-    @jwt_required()
+    @jwt_required(refresh=True)
     @api.doc(security='apiKey')
     @api.response(200, 'Success', refresh_response)
     @api.response(401, 'Unauthorized', default_response)
