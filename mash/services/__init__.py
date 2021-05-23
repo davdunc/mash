@@ -17,5 +17,16 @@
 #
 # monkey
 # https://github.com/flask-restful/flask-restful/pull/913
-import flask.scaffold
-flask.helpers._endpoint_from_view_func = flask.scaffold._endpoint_from_view_func
+import flask
+
+
+def _endpoint_from_view_func(view_func):
+    """
+    Internal helper that returns the default endpoint for a given
+    function.  This always is the function name.
+    """
+    assert view_func is not None, "expected view func if endpoint is not provided."
+    return view_func.__name__
+
+
+flask.helpers._endpoint_from_view_func = _endpoint_from_view_func

@@ -3,3 +3,8 @@ omit =
     */version.py
     */wsgi.py
     */migrations/*
+    */services/__init__.py
+
+[report]
+omit =
+    */services/__init__.py
