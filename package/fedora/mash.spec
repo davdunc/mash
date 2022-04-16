@@ -6,7 +6,7 @@ Version:	 11.2.0
 Release: 	 1
 License:	 GPLv3
 URL:		 https://github.com/SUSE-Enceladus/%{name}
-Source0:	 %{url}/archive/v%{version}/%{srcname}-%{version}.tar.gz
+Source0:	 %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
 BuildArch:	 noarch
 
 BuildRequires: python3-devel
